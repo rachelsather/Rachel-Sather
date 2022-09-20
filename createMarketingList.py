@@ -34,12 +34,16 @@ next(csvfile)
 outfile = open('marketinglistFINAL.csv', 'w')
 
 # create an empty dictionary
-dict = ()
+dict = {}
 
 # iterate through the csv object
 for line in csvfile:
 
     # add the key-value pair to the dictionary
+    dict['first_name'] = [1]
+    dict['last_name'] = [2]
+    dict['email'] = [4]
+    dict['phone'] = [5]
     dict[[1]+[2]] = {'email':[4], 'phone':[5]}
     
 # print the dictionary after the loop is finished
@@ -48,8 +52,8 @@ print(dict)
 # iternate through the dictionary and write to the output file
 outfile.write('Name, Email, Phone')
 
-for tuple in dict.items():
-     outfile.write(tuple)
+for k,v in dict.items():
+     outfile.write(k,v)
 
 # close your output file
 outfile.close()
